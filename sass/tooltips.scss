@@ -1,0 +1,131 @@
+/*
+    Demo for this article:
+    http://blustemy.io/tooltips-with-sass-mixins/
+*/
+
+@mixin tooltip(
+        $tooltip-background-color: white,
+        $tooltip-arrow-base: 2em,
+        $tooltip-arrow-length: 1em,
+        $tooltip-border-width: 0,
+        $tooltip-border-color: transparent,
+        $tooltip-transition-out-duration: .3s
+    ) {
+    // Sizing and positioning
+    box-sizing: border-box;
+    position: absolute;
+    left: 466%;
+    top: -770%; // displayed on top
+    margin-bottom: $tooltip-arrow-length;
+
+    // Text and color properties.
+    background-color: $tooltip-background-color;
+    text-align: center;
+
+    // Animated properties.
+    visibility: hidden;
+    z-index: 200;
+    opacity: 0;
+    transform: translate(-50%, $tooltip-arrow-length);
+    transition:
+        visibility 0s linear $tooltip-transition-out-duration,
+        opacity $tooltip-transition-out-duration ease-in 0s,
+        transform $tooltip-transition-out-duration ease-in 0s;
+
+    // Disable events.
+    pointer-events: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%; left: 50%;
+        width: 0; height: 0;
+    }
+
+    // Specific styles when the tooltip has a border
+    @if $tooltip-border-width {
+        border: $tooltip-border-width solid $tooltip-border-color;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%; left: 50%;
+            width: 0; height: 0;
+        }
+    }
+}
+
+@mixin has-tooltip($tooltip-transition-in-duration: .3s) {
+    position: relative;
+    // Prevent the tooltip from being clipped by its container.
+    overflow: visible;
+
+    // Display the tooltip on hover and on focus.
+    &:hover, &:focus {
+        .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, 0); // horizontally centered
+            transition:
+                visibility 0s linear 0s,
+                opacity $tooltip-transition-in-duration ease-out 0s,
+                transform $tooltip-transition-in-duration ease-out 0s;
+        }
+    }
+}
+
+// Example
+body {
+    font-family: "Arial", sans-serif;
+    padding: 4em 0 0 1em;
+}
+
+a {
+    color: #1098ad;
+    text-decoration: none;
+}
+
+button {
+    font-size: 1em;
+    padding: .5em 1.5em;
+    background: #1098ad;
+    border: .075em solid rgba(0, 0, 0, 0.1);
+    border-radius: .1em;
+    color: white;
+    
+    &:hover, &:focus {
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.has-tooltip {
+    @include has-tooltip($tooltip-transition-in-duration: .3s);
+}
+
+.tooltip {
+    min-width: 10em;
+    padding: .5em .75em;
+    box-shadow: 0 .05em .15em rgba(black, .1);
+}
+
+.tooltip-with-border {
+    @include tooltip(
+        $tooltip-background-color: white,
+        $tooltip-arrow-base: 1.5em,
+        $tooltip-arrow-length: .75em,
+        $tooltip-border-width: .05em,
+        $tooltip-border-color: #999,
+        $tooltip-transition-out-duration: .2s
+    );
+    color: #333;
+}
+
+.tooltip-without-border {
+    @include tooltip(
+        $tooltip-background-color: black,
+        $tooltip-arrow-base: 1em,
+        $tooltip-arrow-length: .5em,
+        $tooltip-transition-out-duration: .2s
+    );
+    color: #fff;
+}

@@ -31,7 +31,7 @@ router.use(function timeLog(req, res, next) {
 
 // Define the home page route
 router.get('/', function(req, res) {
-    res.render('home',{
+    res.render('landing',{
 
     });
 });

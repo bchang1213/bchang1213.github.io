@@ -89,6 +89,12 @@
     margin-top: 5em;
 }
 
+.optionpic {
+    height: 8em;
+    width: inherit;
+    border-radius: 10px;
+}
+
 .carousel, .landingIntro {
     display: inline-block;
 }

@@ -21,6 +21,6 @@ app.all('*', function (req, res) {
 });
 
 //run the server on port 8000
-server.listen(port);
+server.listen(process.env.PORT || port);
 console.log('Listening on port: ', port);
 

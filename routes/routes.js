@@ -26,11 +26,16 @@ router.get('/', function(req, res) {
     });
 });
 
-// Queries HAD API for project data
+// Home Page after Login
 router.get('/home', function (req, res) {
     res.render('home', {
     });
 });
 
+// Store page
+router.get('/store', function (req, res) {
+    res.render('store', {
+    });
+});
 
 module.exports = router;

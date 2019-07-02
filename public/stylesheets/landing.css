@@ -90,9 +90,13 @@
 }
 
 .optionpic {
-    height: 8em;
-    width: inherit;
-    border-radius: 10px;
+    height: 9em;
+    width: 9em;
+    vertical-align: top;
+    /* height: 380px;
+    width: 380px; */
+    border-radius: 50%; 
+    border: 5px solid rgba(255, 255, 255, .5);
 }
 
 .carousel, .landingIntro {
@@ -106,12 +110,14 @@
 
 .options {
     list-style: none;
-    height: 10em;
-    width: 10em;
-    background-color: red;
+    height: 11em;
+    width: 12em;
+    background-color: pink;
+    color: black;
     display: inline-block;
     vertical-align: top;
     margin: 1em 1em 1em 1em;
+    text-align: center;
 }
 
 @media (max-width: 47.999em) {

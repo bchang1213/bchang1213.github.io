@@ -85,10 +85,17 @@
     padding: 2em;
     color: black;
     background-color: white;
+    margin-left: 5em;
+    margin-top: 5em;
 }
 
 .carousel, .landingIntro {
     display: inline-block;
+}
+
+.landingIntro {
+    text-align: center;
+    margin-left: 1em;
 }
 
 .options {

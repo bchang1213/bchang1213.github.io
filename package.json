@@ -6,9 +6,10 @@
   "scripts": {
     "test": "nightwatch tests/nightwatch.js",
     "dev:server": "nodemon -r esm server.js",
-    "start": "concurrently --kill-others-on-fail \"yarn dev:server\"",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev:server\"",
     "compileSass": "sass --scss ./sass/tooltips.scss ./public/stylesheets/tooltips.css",
-    "watchSass": "sass --scss --watch ./sass/tooltips.scss:./public/stylesheets/tooltips.css"
+    "watchSass": "sass --scss --watch ./sass/tooltips.scss:./public/stylesheets/tooltips.css",
+    "start":"node server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +20,10 @@
     "esm": "^3.2.25",
     "express": "^4.17.0",
     "nightwatch": "^1.1.10",
-    "nodemon": "^1.19.0",
     "request": "^2.88.0",
     "yarn": "^1.16.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
 }

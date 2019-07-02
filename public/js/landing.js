@@ -1,4 +1,3 @@
-<script>
 (function (window, document) {
 var menu = document.getElementById('menu'),
     WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
@@ -38,5 +37,3 @@ document.getElementById('toggle').addEventListener('click', function (e) {
 
 window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 })(this, this.document);
-
-</script>

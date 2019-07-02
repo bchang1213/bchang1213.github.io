@@ -95,8 +95,9 @@
     vertical-align: top;
     /* height: 380px;
     width: 380px; */
+    padding: 0.2em;
     border-radius: 50%; 
-    border: 5px solid rgba(255, 255, 255, .5);
+    border: 5px solid #ededed;
 }
 
 .carousel, .landingIntro {
@@ -112,7 +113,6 @@
     list-style: none;
     height: 11em;
     width: 12em;
-    background-color: pink;
     color: black;
     display: inline-block;
     vertical-align: top;

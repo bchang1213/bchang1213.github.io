@@ -1,5 +1,5 @@
-import express from 'express';
-import http from 'http';
+var express = require("express");
+var http = require("http");
 const app = express();
 const server = http.createServer(app);
 const port = 8000;

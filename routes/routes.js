@@ -1,6 +1,6 @@
-import express from 'express';
+var express = require("express");
 const router = express.Router();
-import request from 'request';
+var request = require('request');
 
 
 /************************************************************

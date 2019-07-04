@@ -1,0 +1,50 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "root",
+      "database": "bchang.io",
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "operatorsAliases": {
+        "$and": "Op.and",
+        "$or": "Op.or",
+        "$eq": "Op.eq",
+        "$gt": "Op.gt",
+        "$lt": "Op.lt",
+        "$lte": "Op.lte",
+        "$like": "Op.like"
+      }
+    },
+    "test": {
+      "username": "postgres",
+      "password": "root",
+      "database": "bchang.io",
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "operatorsAliases": {
+        "$and": "Op.and",
+        "$or": "Op.or",
+        "$eq": "Op.eq",
+        "$gt": "Op.gt",
+        "$lt": "Op.lt",
+        "$lte": "Op.lte",
+        "$like": "Op.like"
+      }
+    },
+    "production": {
+      "username": "postgres",
+      "password": "root",
+      "database": "bchang.io",
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "operatorsAliases": {
+        "$and": "Op.and",
+        "$or": "Op.or",
+        "$eq": "Op.eq",
+        "$gt": "Op.gt",
+        "$lt": "Op.lt",
+        "$lte": "Op.lte",
+        "$like": "Op.like"
+      }
+    }
+  }

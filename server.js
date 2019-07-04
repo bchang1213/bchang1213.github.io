@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 //Routes
-app.use(require('./routes/routes.js')); 
+app.use(require('./server/routes/routes.js')); 
 //redirect any strange urls to the root route
 app.all('*', function (req, res) {
     res.redirect('/');

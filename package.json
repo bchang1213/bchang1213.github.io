@@ -7,9 +7,7 @@
     "test": "nightwatch tests/nightwatch.js",
     "dev:server": "nodemon -r esm server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn dev:server\"",
-    "compileSass": "sass --scss ./sass/tooltips.scss ./public/stylesheets/tooltips.css",
-    "watchSass": "sass --scss --watch ./sass/tooltips.scss:./public/stylesheets/tooltips.css",
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +18,9 @@
     "esm": "^3.2.25",
     "express": "^4.17.0",
     "nightwatch": "^1.1.10",
+    "pg": "^7.11.0",
     "request": "^2.88.0",
+    "sequelize": "^5.9.2",
     "yarn": "^1.16.0"
   },
   "devDependencies": {

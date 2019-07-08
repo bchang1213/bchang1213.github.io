@@ -16,10 +16,10 @@ router.use(function timeLog(req, res, next) {
 });
 
 /************************************************************
-*                       Router Functions                    *
+*              Navigation Router Requests                   *
 ************************************************************/
 
-// Define the home page route
+// Default page route
 router.get('/', function(req, res) {
     res.render('landing',{
 
@@ -37,5 +37,22 @@ router.get('/store', function (req, res) {
     res.render('store', {
     });
 });
+
+/************************************************************
+*                       API Requests                        *
+************************************************************/
+//Contact Info Post Route
+router.post('/contact', function(request, response) {
+    console.log("serving contact route.");
+    controller.contactformController.createContactForm(request, response);
+    response.redirect('/');
+})
+
+//Delete Request of Contact Forms
+router.post('/delete', function(request, response){
+    console.log("serving delete route.");
+    controller.contactformController.deleteContactForm(request, response);
+    response.redirect('/management');
+})
 
 module.exports = router;

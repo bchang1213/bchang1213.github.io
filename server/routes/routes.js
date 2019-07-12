@@ -1,8 +1,7 @@
 var express = require("express");
 const router = express.Router();
-var request = require('request');
-
-
+var request = require('request'); 
+const controller = require('../controllers/controller.js');
 /************************************************************
 *                       Helper Functions                    *
 ************************************************************/
@@ -46,6 +45,13 @@ router.post('/contact', function(request, response) {
     console.log("serving contact route.");
     controller.contactformController.createContactForm(request, response);
     response.redirect('/');
+})
+
+//Submit A Product
+router.post('/createProduct', function(request, response) {
+    console.log("Posting a single product.");
+    controller.productController.createProduct(request, response);
+    response.send("Product saved.");
 })
 
 //Delete Request of Contact Forms

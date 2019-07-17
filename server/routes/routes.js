@@ -33,7 +33,10 @@ router.get('/home', function (req, res) {
 
 // Store page
 router.get('/store', function (req, res) {
+    console.log("serving store page");
+    var products = controller.productController.ListProducts(req, res);
     res.render('store', {
+        products: products
     });
 });
 
@@ -44,6 +47,12 @@ router.get('/store', function (req, res) {
 router.post('/contact', function(request, response) {
     console.log("serving contact route.");
     controller.contactformController.createContactForm(request, response);
+    response.redirect('/');
+})
+//Get All Products
+router.get('/products', function(request, response){
+    console.log("serving list of all products.");
+    controller.productController.ListProducts(request, response);
     response.redirect('/');
 })
 

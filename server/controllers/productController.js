@@ -1,4 +1,4 @@
-const Product = require('../models/product.js');
+const Product = require('../models').Product;
 
 //ES 5 syntax
 module.exports = {
@@ -7,12 +7,13 @@ module.exports = {
         Product.create({
             name: request.body.name,
             description: request.body.description,
+            url: request.body.url,
             price: request.body.price,
             soldout: request.body.soldout,
             visible: request.body.visible,
             onsale: request.body.onsale
         }).then(function(result){
-            response.status(201).send(result);
+            console.log('Product Saved: ' + result);
         }).catch(function(error){
             console.log("Error detected: " + error.message);
         })

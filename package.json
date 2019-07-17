@@ -7,7 +7,8 @@
     "test": "nightwatch tests/nightwatch.js",
     "dev:server": "nodemon -r esm server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn dev:server\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "killinstance": "kill $(lsof -t -i:8000)"
   },
   "keywords": [],
   "author": "",

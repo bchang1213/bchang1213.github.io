@@ -3,7 +3,11 @@ var http = require("http");
 const app = express();
 const server = http.createServer(app);
 const port = 8000;
+var bodyParser = require('body-parser');
 
+//enable body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // Sets the location where express will look for the ejs views
 app.set('views', __dirname + '/views'); 
 

@@ -25,9 +25,33 @@ router.get('/', function(req, res) {
     });
 });
 
-// Home Page after Login
+// User Login Route PAYWALL
+router.get('/login', function (req, res) {
+    res.render('login', {
+    });
+});
+
+// Home Page after Login for Online Training
 router.get('/home', function (req, res) {
     res.render('home', {
+    });
+});
+
+// Affiliates Info
+router.get('/team', function (req, res) {
+    res.render('affiliates', {
+    });
+});
+
+// Blog
+router.get('/blog', function (req, res) {
+    res.render('blog', {
+    });
+});
+
+// Contact
+router.get('/hello', function (req, res) {
+    res.render('contactus', {
     });
 });
 
@@ -37,7 +61,7 @@ router.get('/store', function (req, res) {
     controller.productController.renderStore(req, res);
 });
 
-// Store page
+// Product page
 router.get('/product/:productID', function (req, res) {
     console.log("serving product page");
     controller.productController.renderProduct(req, res);

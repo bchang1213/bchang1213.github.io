@@ -1,0 +1,13 @@
+.call-to-action {
+    margin-top: 5em;
+    
+}
+
+.signup-portal, .login-portal {
+    display: inline-block;
+}
+
+.signup-portal {
+    width: 15em;
+}
+

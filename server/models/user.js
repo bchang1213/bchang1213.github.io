@@ -3,11 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
     fname: DataTypes.STRING,
     lname: DataTypes.STRING,
+    username: DataTypes.STRING,
     email: DataTypes.STRING,
     address: DataTypes.STRING,
+    address2: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipcode: DataTypes.BIGINT,
+    password: DataTypes.STRING,
     country: DataTypes.STRING
   }, {
     schema: 'cobrinha',

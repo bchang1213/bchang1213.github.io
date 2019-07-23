@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cobrinha Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="/img/cobrinha.png"/>
+	 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+     <link rel="stylesheet" href="/stylesheets/navbar.css">
+     <link rel="stylesheet" href="/stylesheets/login.css">
+	 <script src="/js/landing.js"></script>
+
+    </head>
+    <body>
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+<!--<![endif]-->
+
+
+    <% include navbar %>
+    <main>
+    <div class='call-to-action'>
+        <div class='signup-portal'>
+            <h1>Sign Up</h1>
+            <form>
+                <label for="fname">First Name
+                    <input type="text" name="fname" value="">
+                </label>
+                <label for="lname">Last Name
+                    <input type="text" name="lname" value="">
+                </label>
+                <label for="email">Email
+                    <input type="text" name="email" value="">
+                </label>
+                <label for="username">Username
+                    <input type="text" name="username" value="">
+                </label>
+                <label for="address">Address
+                    <input type="text" name="address" value="">
+                </label>
+                <label for="address2">Address 2
+                    <input type="text" name="address2" value="">
+                </label>
+                <label for="city">City
+                    <input type="text" name="city" value="">
+                </label>
+                <label for="state">State (U.S)
+                    <input type="text" name="state" value="">
+                </label>
+                <label for="zipcode">Zip Code
+                    <input type="text" name="zipcode" value="">
+                </label>
+                <label for="country">Country
+                    <input type="text" name="country" value="">
+                </label>
+                <label for="password">Password
+                    <input type="password" name="password" value="">
+                </label>
+            </form>
+        </div>
+        <div class='login-portal'>
+            <h1>Login</h1>
+            <form>
+                <label for="username">Username
+                    <input type="text" name="username" value="">
+                </label>
+                <label for="password">Password
+                    <input type="password" name="password" value="">
+                </label>
+            </form>
+        </div>
+    </div>
+    </main>
+    </body>
+</html>

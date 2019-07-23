@@ -25,12 +25,12 @@
     <main>
         <div>
             <% for(var i = 0; i < products.length; i++) {%>
-                <% var product = products[i]; %>
+            <% var product = products[i]; %>
             <div class="product">
-                <p>Name: <%= product.name %></p>
-                <p>Description: <%= product.description %></p>
-                <p>Price: <%= product.price %></p>
-                <img src="<%= product.url %>" alt="<%= product.name %>"
+                    <img class="<%= product.name%>-product product-image" src="<%= product.url %>" alt="<%= product.name %>"
+                <p class='product-name'><%= product.name %></p>
+                <p class='product-description'><%= product.description %></p>
+                <p>Price: $<%= product.price %></p>
             </div>
             <% } %>
         </div>

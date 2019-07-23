@@ -18,4 +18,16 @@
 
 .product {
     margin-top: 10em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-image {
+    height: 5em;
+    width: 5em;
+    display: block;
+}
+
+.product-description {
+    width: 10em;
 }

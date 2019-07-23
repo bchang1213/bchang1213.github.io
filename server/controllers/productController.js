@@ -3,7 +3,7 @@ const Product = require('../models').Product;
 //ES 5 syntax
 module.exports = {
     createProduct(request, response){
-        console.log("Post received. Creating new product.");
+        console.log("Received request to create new product.");
         Product.create({
             name: request.body.name,
             description: request.body.description,
@@ -30,5 +30,19 @@ module.exports = {
         }).catch(function(error){
             console.log("Error occurred when retrieving all products: " + error.message);
         })
+    },
+    renderProduct(req, res){
+        console.log("Received request to view one product.");
+        var productID = req.params.productID;
+        Product.findByPk(productID)
+        .then(function(result){
+            res.render('product', {
+                product: result
+            });
+        })
+        .catch(function(){
+            console.log("Error occurred when retrieving one product: " + error.message);
+        })
+        
     },
 };

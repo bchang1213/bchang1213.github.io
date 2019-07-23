@@ -1,0 +1,19 @@
+.product {
+    margin-top: 5em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-image {
+    height: 20em;
+    width: 20em;
+    display: block;
+}
+
+.product-description {
+    width: 10em;
+}
+
+.product-url {
+    
+}

@@ -37,6 +37,12 @@ router.get('/store', function (req, res) {
     controller.productController.renderStore(req, res);
 });
 
+// Store page
+router.get('/product/:productID', function (req, res) {
+    console.log("serving product page");
+    controller.productController.renderProduct(req, res);
+});
+
 /************************************************************
 *                       API Requests                        *
 ************************************************************/

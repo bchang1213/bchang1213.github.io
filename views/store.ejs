@@ -24,9 +24,15 @@
     <% include navbar %>
     <main>
         <div>
+            <% for(var i = 0; i < products.length; i++) {%>
+                <% var product = products[i]; %>
             <div class="product">
-                <p>Name: <%= %></p>
+                <p>Name: <%= product.name %></p>
+                <p>Description: <%= product.description %></p>
+                <p>Price: <%= product.price %></p>
+                <img src="<%= product.url %>" alt="<%= product.name %>"
             </div>
+            <% } %>
         </div>
         <fieldset class="addProduct">
             <legend>Create Product</legend>

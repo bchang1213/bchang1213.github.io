@@ -18,12 +18,15 @@ module.exports = {
             console.log("Error detected: " + error.message);
         })
     },
-    ListProducts(request, response){
+    renderStore(req, res){
         console.log("Received request for listing all products.");
         Product.findAll()
         .then(function(result){
             console.log('Retrieved list from db. Sending to user now.');
-            return(result);
+            var products = result;
+            res.render('store', {
+                products: products
+            });
         }).catch(function(error){
             console.log("Error occurred when retrieving all products: " + error.message);
         })

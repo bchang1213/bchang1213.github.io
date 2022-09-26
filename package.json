@@ -19,7 +19,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.0",
     "express-session": "^1.16.2",
-    "nightwatch": "^1.1.10",
+    "nightwatch": "^1.7.13",
     "pg": "^7.11.0",
     "request": "^2.88.0",
     "sequelize": "^5.9.2",
